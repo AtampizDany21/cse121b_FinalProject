@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSE 121b: Daniela Atampiz | Final Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Fitness Calculator.
+        </h1>
+    </header>
+    <main>
+        <section id="Introduction">
+            <article>
+                <h2> The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.</h2>
+                <p>For most adults, an ideal BMI is in the 18.5 to 24.9 range.
+                    For children and young people aged 2 to 18, the BMI calculation takes into account age and gender as well as height and weight.
+                </p>
+                    
+                <h3>If your BMI is:
+                </h3>    
+                <p> below 18.5 – you're in the underweight range
+                    between 18.5 and 24.9 – you're in the healthy weight range
+                    between 25 and 29.9 – you're in the overweight range
+                    between 30 and 39.9 – you're in the obese range
+                </p>
+            </article>
+        </section>
+        <section id="Your information">
+            <article>
+                <h2>Please insert your current information.</h2>
+                <div>
+                    <label for="gender">Insert your gender (F/M):</label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+                <div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                <div>
+                <div>
+                    <label for="weight">Weight in kgs:</label>
+                    <input type="text" id="weight" name="weight">
+                </div>
+                <div>
+                    <label for="height">Height in cms:</label>
+                    <input type="text" id="height" name="height">
+                </div>
+                <div>
+                    <input type="button" id="bmi calculations" value="BMI calculations">
+                </div>
+                <div>
+                    <label for="bmi">BMI:</label>
+                    <input type="text" id="bmi" name="bmi" disabled>
+                </div>
+            </article>
+            
+        </section>
+        <hr>
+        <section>
+            <h2>Extra Recommendations</h2>
+            <p>
+                Water: Drink at least 2 litters per day.
+            </p>
+            <p>
+                Diet: Include vegetables, fiber, and fruits.
+            </p>
+            <p>
+                Exercise: At least 3 days a week.
+            </p>
+            <p>
+                Visit your doctor: Each 6 months.
+            </p>
+        </section>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | Fitness Calculator | CSE 121b | Daniela Atampiz
+    </footer>
+</body>
+
+</html>
