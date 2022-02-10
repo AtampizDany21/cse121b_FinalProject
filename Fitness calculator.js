@@ -3,36 +3,43 @@
 function bmi(weight,height) {
 
     // Step 2: In the function, return the division of the parameters weight and height elevated by 2
-        return  weight / (height ** 2);
-    }
+    return  weight / (height * height);
+}
     
-    // Step 3: Using function declaration, define a function named bmiCalculation that gets the values of two HTML form controls with IDs of weight and height. Pass them to the bmi function
-    function bmiCalculations(){
-        let weight = parseInt(document.querySelector("#weight").value);
-        let height = parseInt(document.querySelector("#height").value);
-        let result = bmi(weight,height);
-    
-    // Step 4: Assign the return value to an HTML form element with an ID of sum
-        document.querySelector("#bmi").value = result;
-    }
-    // Step 5: Add a "click" event listener to the HTML button with an ID of addNumbers that calls the addNumbers function
-        document.querySelector("#bmiCalculations").addEventListener("click",bmiCalculations);
-    
-    ///if (gender ="f") {
-        ///bmr = (weight, height,age)
-        ///return 447.593 + 9.247 * weight + 3.098 * height - 4.330 * age;
-        ///} else {
-        ///return 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
-        ///}
-    
-    ///function bmrCalculations(){
-    ///    let weight = parseInt(document.querySelector("#weight").value);
-    ///    let height = parseInt(document.querySelector("#height").value);
-    ///    let age = parseInt(document.querySelector("#age").value);
-    ///    let result = bmr(weight,height,age);
-    
-    ///    document.querySelector("#bmr").value = result;
-    ///}
-    ///    document.querySelector("#bmrCalculations").addEventListener("click", bmrCalculations);
+    // Using function declaration, define a function named bmiCalculation that gets the values of two HTML form controls with IDs of weight and height. Pass them to the bmi function
+function bmiCalculations(){
+    let weight = parseInt(document.querySelector("#weight").value);
+    let height = parseInt(document.querySelector("#height").value)/ 100;
+    let result = bmi(weight,height);
     
     
+
+    let message;
+
+        if (result < "18.5") {
+            message = "Underweight";
+        }
+
+        else if(result >= "18.5" && result <= 25) {
+            message = "Healthy Weight";
+        }
+
+        else if (result >= 25 && result <= 30) {
+            message = "Overweight";
+        }
+
+        else if (result >= 30) {
+            message = "Obese class 1";
+        }
+
+        else {
+            message = "Obese class 2";
+        }
+
+            document.querySelector("#message").textContent = message;
+
+            // Assign the return value to an HTML form element with an ID of total
+    document.querySelector("#total").value = result.toPrecision(2);
+}
+// Add a "click" event listener to the HTML button with an ID of bmiCalculations that calls the bmi function
+document.querySelector("#bmiCalculations").addEventListener("click", bmiCalculations);
