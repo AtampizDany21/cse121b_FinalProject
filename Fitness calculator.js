@@ -29,12 +29,8 @@ function bmiCalculations(){
             message = "Overweight";
         }
 
-        else if (result >= 30) {
-            message = "Obese class 1";
-        }
-
         else {
-            message = "Obese class 2";
+            message = "Obese";
         }
 
         // Assign the value of the message variable to the HTML element with an ID of message.
