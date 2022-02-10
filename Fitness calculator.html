@@ -1,87 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSE 121b: Daniela Atampiz | Final Project</title>
+    <title>CSE 121b: Week 06 | Final Project</title>
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
+    
     <header>
-        <h1>Fitness Calculator.
+        <h1> Fitness Calculator.
         </h1>
     </header>
     <main>
         <section id="Introduction">
             <article>
-                <h2> The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.</h2>
-                <p>For most adults, an ideal BMI is in the 18.5 to 24.9 range.
-                    For children and young people aged 2 to 18, the BMI calculation takes into account age and gender as well as height and weight.
+                <p> <strong>The body mass index (BMI)</strong> is a measure that uses your height and weight to work out if your weight is healthy.
+                </br>For most adults (20 years old and older), an ideal BMI is in the 18.5 to 24.9 range.
+                </p>
+                <hr>
+                <p>
+                If the result of the body mass index determines:</br>
+                Below 18.5. You are in the category: Underweight.</br>
+                Between 18.5 – 24.9. You are in the category: Healthy Weight</br>
+                Between 25.0 – 29.9. You are in the category: Overweight</br>
+                Between 30.0 and Above.	You are in the category: Obesity</br>
                 </p>
                     
-                <h3>If your BMI is:
-                </h3>    
-                <p> below 18.5 – you're in the underweight range
-                    between 18.5 and 24.9 – you're in the healthy weight range
-                    between 25 and 29.9 – you're in the overweight range
-                    between 30 and 39.9 – you're in the obese range
+                <h2>WARNING!
+                </h2>    
+                <p><strong> This is not a medical advice.</strong> Remember, each body type is different.  </br> If you have doubts according to your BMI, or you want to improve your health,
+                </br><strong>PLEASE</strong> visit your doctor for a complete exam and precise information.
                 </p>
+                <div>
+                    <nav>
+                      <ul>
+                        <li><a href="https://www.cdc.gov/HealthyLiving/" target="_blank">For more information visit the CDC site</a></li>
             </article>
-        </section>
-        <section id="Your information">
-            <article>
-                <h2>Please insert your current information.</h2>
-                <div>
-                    <label for="gender">Insert your gender (F/M):</label>
-                    <input type="text" id="gender" name="gender">
-                </div>
-                <div>
-                <div>
-                    <label for="age">Age:</label>
-                    <input type="text" id="age" name="age">
-                </div>
-                <div>
-                <div>
-                    <label for="weight">Weight in kgs:</label>
-                    <input type="text" id="weight" name="weight">
-                </div>
-                <div>
-                    <label for="height">Height in cms:</label>
-                    <input type="text" id="height" name="height">
-                </div>
-                <div>
-                    <input type="button" id="bmi calculations" value="BMI calculations">
-                </div>
-                <div>
-                    <label for="bmi">BMI:</label>
-                    <input type="text" id="bmi" name="bmi" disabled>
-                </div>
-            </article>
-            
         </section>
         <hr>
         <section>
-            <h2>Extra Recommendations</h2>
-            <p>
-                Water: Drink at least 2 litters per day.
-            </p>
-            <p>
-                Diet: Include vegetables, fiber, and fruits.
-            </p>
-            <p>
-                Exercise: At least 3 days a week.
-            </p>
-            <p>
-                Visit your doctor: Each 6 months.
-            </p>
+            <article>
+                <h2>Please insert your current information.</h2>
+                <div>
+                    <label for="gender"> Insert your gender (f/m): </label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+                
+                <div>
+                    <label for="age">Insert your age:</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                
+                <div>
+                    <label for="weight">Insert your weight (in kgs):</label>
+                    <input type="text" id="weight" name="weight">
+                </div>
+
+                <div>
+                    <label for="height">Insert your height (in cms):</label>
+                    <input type="text" id="height" name="height">
+                </div>
+
+                <div>
+                    <input type="button" id="bmiCalculations" value="Calculate.">
+                </div>
+                
+                <div>
+                    <label for="total">Your BMI is: </label>
+                    <input type="text" id="total" name="total" disabled>
+                </div>
+               
+                <h3>
+                    Category: <span id="message"></span>
+                </h3>
+                
+            </article>  
+        </section>
+        <hr>
+        <section>
+            <article>
+                <h2>Extra Recommendations</h2>
+                <p>
+                    <strong>Drink water:</strong> At least 2 litters per day.
+                </p>
+                <p>
+                    <strong>Diet:</strong> Include vegetables, fiber, and fruits.
+                </p>
+                <p>
+                    <strong>Prize yourself:</strong> Choose one meal that you really like to enjoy only once a week. </br>It will become a reward for your efforts.
+                </p>
+                <p>
+                    <strong>Exercise:</strong> At least 3 days a week.
+                </p>
+                <p>
+                    <strong>VISIT YOUR DOCTOR!:</strong> As regularly as possible. <strong>Minimum once a year.</strong>
+                </p>
+            </article>
         </section>
     </main>
     <footer>
-        &copy;<span id="year"></span> | Fitness Calculator | CSE 121b | Daniela Atampiz
+        &copy; 2022 | Fitness Calculator | CSE 121b | Daniela Atampiz
     </footer>
+    <script src="./fitnessCalculator.js"></script>
+    <script src="./main.js"></script>"
 </body>
 
 </html>
